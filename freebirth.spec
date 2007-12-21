@@ -17,6 +17,7 @@ URL:		http://www.bitmechanic.com/projects/freebirth/
 License:	GPL 
 Group:		Sound
 BuildRequires:	libgtk+-devel libglib-devel X11-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Freebirth is a free software bass synthesizer / step sequencer
