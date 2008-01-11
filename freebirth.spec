@@ -52,16 +52,6 @@ install -m755 wav_to_raw -D %{buildroot}%{_bindir}/wav_to_raw
 install -m644 raw/*.raw %{buildroot}%{_datadir}/freebirth/raw/
 
 #menu item
-install -d %{buildroot}%{_menudir}
-cat <<EOF > %{buildroot}%{_menudir}/%{name}
-?package(%{name}):command="%{_bindir}/%{name}" \
-		icon=%{name}.png \
-		needs="x11" \
-		section="Multimedia/Sound" \
-		title="Freebirth"\
-		longtitle="%{Summary}"\
-		xdg="true"
-EOF
 
 mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -99,7 +89,6 @@ rm -rf %{buildroot}
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
-%{_menudir}/%{name}
 %{_datadir}/applications/*
 
 
