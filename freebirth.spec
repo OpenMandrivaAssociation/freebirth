@@ -1,6 +1,6 @@
 %define name	freebirth
 %define version	0.3.2
-%define release	%mkrel 15
+%define release	%mkrel 16
 %define	Summary	Bass synth/sequencer/sample player for linux
 
 Summary:	%{Summary}
