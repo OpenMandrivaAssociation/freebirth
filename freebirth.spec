@@ -11,13 +11,12 @@ Source0:	%{name}-%{version}.tar.bz2
 Source11:	%{name}-16x16.png
 Source12:	%{name}-32x32.png
 Source13:	%{name}-48x48.png
-Patch0:		%{name}-optflags.patch
 Patch1:		freebirth-0.3.2-debian-fixes.patch
 Patch2:		freebirth-0.3.2-mdv-fix-str-fmt.patch
 URL:		http://www.bitmechanic.com/projects/freebirth/
 License:	GPLv2+ 
 Group:		Sound
-BuildRequires:	libgtk+-devel libglib-devel X11-devel
+BuildRequires:	gtk+2-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -33,18 +32,12 @@ also has other capabilities such as
 
 %prep
 %setup -q
-%patch0 -p0
-%patch1 -p1
+%patch1 -p0
 %patch2 -p1 -b .strfmt
 
 %build
-# quick patch for samples in /usr/share/freebirth
-perl -pi -e "s|FB_SAMPLES \".\"|FB_SAMPLES \"/usr/share/freebirth\"||g;" \
-  raw_wave.h
-
-# actual make
-#make all
-%make OPTFLAGS="$RPM_OPT_FLAGS -O3"
+%setup_compile_flags
+%make
 
 %install
 rm -rf %{buildroot}
