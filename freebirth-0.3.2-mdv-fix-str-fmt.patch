@@ -1,0 +1,21 @@
+diff -p -up freebirth-0.3.2/fuse_loops.c.strfmt freebirth-0.3.2/fuse_loops.c
+--- freebirth-0.3.2/fuse_loops.c.strfmt	1999-02-27 03:02:23.000000000 +0100
++++ freebirth-0.3.2/fuse_loops.c	2009-12-07 20:15:56.000000000 +0100
+@@ -63,7 +63,7 @@ void expand(sample_producer *node, char 
+   for (; *tmpl; tmpl++) {
+     char buf[1024];
+     char *sp = *tmpl, *dp = buf;
+-    dp += sprintf(dp, prefix);
++    dp += sprintf(dp, "%s", prefix);
+ 
+     while (*sp) {
+       if (*sp == '$') {
+@@ -107,7 +107,7 @@ void expand(sample_producer *node, char 
+     }
+     *dp++ = '\n';
+     *dp = '\0';
+-    fprintf(file, buf);
++    fputs(buf, file);
+   }
+ }
+ 
