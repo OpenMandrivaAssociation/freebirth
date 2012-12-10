@@ -91,3 +91,56 @@ rm -rf %{buildroot}
 %{_datadir}/applications/*
 
 
+
+
+%changelog
+* Thu Jan 06 2011 Funda Wang <fwang@mandriva.org> 0.3.2-18mdv2011.0
++ Revision: 629098
+- update with gentoo's patch to fix segment fault
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - rebuild
+
+* Mon Dec 07 2009 Jérôme Brenier <incubusss@mandriva.org> 0.3.2-17mdv2010.1
++ Revision: 474506
+- fix str fmt
+- fix license tag
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 0.3.2-15mdv2009.0
++ Revision: 245357
+- rebuild
+- drop old menu
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+* Fri Dec 21 2007 Olivier Blin <oblin@mandriva.com> 0.3.2-13mdv2008.1
++ Revision: 136419
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+
+* Wed Feb 28 2007 Per Øyvind Karlsen <pkarlsen@mandriva.com> 0.3.2-13mdv2007.0
++ Revision: 127168
+- fix category in menu
+- Import freebirth
+
+* Thu Aug 10 2006 Lenny Cartier <lenny@mandriva.com> 0.3.2-12mdv2007.0
+- xdg
+
+* Thu Jul 07 2005 Per Øyvind Karlsen <pkarlsen@mandriva.com> 0.3.2-11mdk
+- update from Sat Jan 22 2005 that got lost
+- Fixed segmentation fault on file load in Sample Pitch (P1 from debian)
+- compile with -O3
+- a little nicer description (from debian)
+- change summary macro to avoid possible conflicts if we were to build debug package
+- don't bzip2 icons
+
+* Thu May 27 2004 Lenny Cartier <lenny@mandrakesoft.com> 0.3.2-10mdk
+- rebuild
+
