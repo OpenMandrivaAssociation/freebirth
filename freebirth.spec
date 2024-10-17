@@ -13,7 +13,7 @@ Source12:	%{name}-32x32.png
 Source13:	%{name}-48x48.png
 Patch1:		freebirth-0.3.2-debian-fixes.patch
 Patch2:		freebirth-0.3.2-mdv-fix-str-fmt.patch
-URL:		http://www.bitmechanic.com/projects/freebirth/
+URL:		https://www.bitmechanic.com/projects/freebirth/
 License:	GPLv2+ 
 Group:		Sound
 BuildRequires:	gtk+2-devel
