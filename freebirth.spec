@@ -16,6 +16,7 @@ Patch2:		freebirth-0.3.2-mdv-fix-str-fmt.patch
 URL:		https://www.bitmechanic.com/projects/freebirth/
 License:	GPLv2+ 
 Group:		Sound
+BuildRequires:	make
 BuildRequires:	gtk+2-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
